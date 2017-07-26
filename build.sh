@@ -1,2 +1,1 @@
-docker build -t yogeshtest .
-docker run -d yogeshtest
+docker build -t yogeshtest . && docker run -d yogeshtest

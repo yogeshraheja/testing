@@ -1,2 +1,2 @@
-docker build -t yogeshtest ./Dockerfile
+docker build -t yogeshtest .
 docker run -d yogeshtest

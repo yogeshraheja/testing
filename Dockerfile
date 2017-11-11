@@ -6,3 +6,4 @@ EXPOSE 80
 VOLUME /mnt/docker_vol  /data
 RUN echo "httpd" >> /root/.bashrc
 CMD ["/bin/bash"]
+# editin to tesdt docker hub

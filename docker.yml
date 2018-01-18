@@ -6,7 +6,7 @@
     - name: Copy Docker file
       copy: src=/var/lib/jenkins/workspace/Dockerdummy/Dockerfile dest=/tmp/Dockerfile mode=0777
     - name: Building docker file
-      command: docker build -t yogeshtest /tmp/Dockerfile
+      command: docker build -t yogeshtest /tmp/
     - name: Running Container
       command: docker run -dt -p 8999:80 yogeshtest
 

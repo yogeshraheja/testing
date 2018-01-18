@@ -1,1 +1,1 @@
-docker build -t yogeshtest . && docker run -d yogeshtest
+docker build -t yogeshtest . && docker run -dt -p 8088:80 yogeshtest

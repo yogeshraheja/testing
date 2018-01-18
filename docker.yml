@@ -3,7 +3,11 @@
   hosts: 192.168.0.12
 
   tasks:
+    - name: Copy Docker file
+      copy: src=/var/lib/jenkins/workspace/Dockerdummy/Dockerfile dest=/tmp/Dockerfile mode=0777
     - name: Building docker file
+      command: docker build -t /tmp/Dockerfile
+    - name: Running Container
       command: docker run -dt -p 8999:80 yogeshtest
 
   roles:

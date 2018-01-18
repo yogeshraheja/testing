@@ -1,8 +1,20 @@
 FROM centos
-MAINTAINER  yogesh raheja 
+MAINTAINER yogesh raheja yogesh.raheja@thinknyx.com
+RUN mkdir /data
 RUN yum -y install httpd php
-RUN echo "Website is hosted inside a container" > /var/www/html/index.html
+RUN echo "Thinknyx Technologies Deals in DevOps and Cloud" > /var/www/html/index.html
 EXPOSE 80
-VOLUME /mnt/docker_vol  /data
+VOLUME /var/log /data
 RUN echo "httpd" >> /root/.bashrc
 CMD ["/bin/bash"]
+
+
+##### FIRST TEST ##########
+#FROM centos
+#MAINTAINER  yogesh raheja 
+#RUN yum -y install httpd php
+#RUN echo "Website is hosted inside a container" > /var/www/html/index.html
+#EXPOSE 80
+#VOLUME /mnt/docker_vol  /data
+#RUN echo "httpd" >> /root/.bashrc
+#CMD ["/bin/bash"]

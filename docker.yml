@@ -1,0 +1,10 @@
+---
+- name: Docker
+  hosts: 192.168.0.12
+
+  roles:
+  - docker-test
+
+  tasks:
+  - name: Building docker file
+    command: docker run -dt -p 8999:80 yogeshtest
